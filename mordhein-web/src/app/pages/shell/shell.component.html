@@ -1,0 +1,14 @@
+<mat-sidenav-container class="vh-100">
+  <button mat-icon-button color="accent" (click)="sidenav.toggle()" aria-label="Example icon button with a menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-sidenav #sidenav mode="side" disableClose="true">
+    <mat-list role="list">
+      <mat-list-item role="listitem"><a [routerLink]="['/home']" >Home</a></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem" ><a [routerLink]="['/warbands']" >Warbands</a></mat-list-item>
+      <mat-list-item role="listitem">Heroes</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

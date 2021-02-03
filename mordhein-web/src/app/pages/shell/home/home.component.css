@@ -1,0 +1,12 @@
+.customCard{
+  height: 100px;
+  cursor: pointer;
+}
+
+.customCard:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.22);
+}
+
+h2 {
+  font-weight: bolder;
+}
