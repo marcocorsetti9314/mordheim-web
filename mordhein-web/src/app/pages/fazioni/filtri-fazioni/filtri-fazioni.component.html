@@ -1,0 +1,21 @@
+<mat-card>
+  <div class="col">
+    <h3>Warband</h3>
+  </div>
+  <form [formGroup]="form" class="row d-flex justify-content-between">
+    <mat-form-field class="col-5">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Ex. Orks and Goblins" formControlName="nome">
+    </mat-form-field>
+  
+    <mat-form-field class="col-5">
+      <mat-label>N. Max</mat-label>
+      <input matInput placeholder="Ex. 20" formControlName="n_max">
+    </mat-form-field>
+
+    <button type="submit" mat-icon-button color="accent" #btncerca>
+      <mat-icon>search</mat-icon>
+    </button>
+
+  </form>
+</mat-card>

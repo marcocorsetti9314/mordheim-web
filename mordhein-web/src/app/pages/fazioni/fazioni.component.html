@@ -1,8 +1,8 @@
 <mat-sidenav-container>
   <mat-sidenav-content>
     <div class="container">
-      <div class="col d-flex mt-4 justify-content-center">
-        <h1 class="text-danger" style="font-weight: bolder;">Warband</h1>
+      <div class="row mt-4">
+        <app-filtri-fazioni></app-filtri-fazioni>
       </div>
       <div class="d-flex justify-content-end mt-4 mb-4">
         <button [routerLink]="['new']" mat-button color="accent">New Warband</button>
@@ -11,10 +11,9 @@
     </div>
   </mat-sidenav-content>
 
-  <mat-sidenav #sidenav mode="over" [opened]="openSidebar" position="end" disableClose="true">
+  <mat-sidenav #sidenav mode="over" (closedStart)="navigateBack()" [opened]="openSidebar" position="end">
     <div class="d-flex flex-row-reverse">
-      <button class="m-2" (click)="navigateBack()" mat-icon-button color="accent"
-        aria-label="Example icon button with a plus one icon">
+      <button class="m-2" (click)="navigateBack()" mat-icon-button color="accent">
         <mat-icon>close</mat-icon>
       </button>
     </div>
